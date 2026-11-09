@@ -1,5 +1,7 @@
 # Video Tutorial · API en C# con Docker y un agente de IA
 
+[Ver el Video Tutorial en YouTube](https://www.youtube.com/watch?v=-iw6imTxQl4)
+
 Material de Prof. Juan Zamora: CRUD de productos con ASP.NET Core 10, controllers, servicio, Entity Framework Core 10 y PostgreSQL. Swagger UI permite explorar y probar el contrato HTTP. No incluye una aplicación gráfica para usuarios finales.
 
 ## Requisitos antes de empezar
