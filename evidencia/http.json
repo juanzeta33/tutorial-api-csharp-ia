@@ -1,0 +1,267 @@
+[
+  {
+    "method": "GET",
+    "path": "/api/productos",
+    "status": 200,
+    "body": [],
+    "location": null,
+    "empty": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/productos",
+    "status": 201,
+    "body": {
+      "id": 1,
+      "nombre": "Cuaderno",
+      "precio": 4.5,
+      "existencias": 8
+    },
+    "location": "http://localhost:5210/api/productos/1",
+    "empty": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/productos/1",
+    "status": 200,
+    "body": {
+      "id": 1,
+      "nombre": "Cuaderno",
+      "precio": 4.5,
+      "existencias": 8
+    },
+    "location": null,
+    "empty": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/productos",
+    "status": 400,
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.1",
+      "title": "One or more validation errors occurred.",
+      "status": 400,
+      "errors": {
+        "Nombre": [
+          "The Nombre field is required."
+        ]
+      },
+      "traceId": "00-fd6437bc750329bdf9d4f3eb62570bb3-eb104c57d44d55e1-00"
+    },
+    "location": null,
+    "empty": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/productos",
+    "status": 400,
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.1",
+      "title": "One or more validation errors occurred.",
+      "status": 400,
+      "errors": {
+        "Precio": [
+          "The field Precio must be between 0 and 99999999.99."
+        ]
+      },
+      "traceId": "00-0c949dd3f76eb092720d7914c1fb0f90-852ca250e9098b44-00"
+    },
+    "location": null,
+    "empty": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/productos",
+    "status": 400,
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.1",
+      "title": "One or more validation errors occurred.",
+      "status": 400,
+      "errors": {
+        "Existencias": [
+          "The field Existencias must be between 0 and 2147483647."
+        ]
+      },
+      "traceId": "00-475587f98025b2b70789448a6ab83b74-8ebd0dd792a31b36-00"
+    },
+    "location": null,
+    "empty": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/productos",
+    "status": 400,
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.1",
+      "title": "One or more validation errors occurred.",
+      "status": 400,
+      "errors": {
+        "Precio": [
+          "El precio admite hasta dos decimales."
+        ]
+      },
+      "traceId": "00-342ae6a8a6e60ebb16984fe5eb7f409a-c1555892d6b101f6-00"
+    },
+    "location": null,
+    "empty": false
+  },
+  {
+    "method": "POST",
+    "path": "/api/productos",
+    "status": 400,
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.1",
+      "title": "One or more validation errors occurred.",
+      "status": 400,
+      "errors": {
+        "$": [
+          "JSON deserialization for type 'Productos.Api.Contracts.ProductoWriteDto' was missing required properties including: 'precio'."
+        ],
+        "dto": [
+          "The dto field is required."
+        ]
+      },
+      "traceId": "00-51861b8494bce16d472430431a6d62df-e9c52706aaf2eb35-00"
+    },
+    "location": null,
+    "empty": false
+  },
+  {
+    "method": "PUT",
+    "path": "/api/productos/1",
+    "status": 204,
+    "body": null,
+    "location": null,
+    "empty": true
+  },
+  {
+    "method": "GET",
+    "path": "/api/productos/1",
+    "status": 200,
+    "body": {
+      "id": 1,
+      "nombre": "Cuaderno grande",
+      "precio": 6.25,
+      "existencias": 4
+    },
+    "location": null,
+    "empty": false
+  },
+  {
+    "method": "PUT",
+    "path": "/api/productos/1",
+    "status": 400,
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.1",
+      "title": "One or more validation errors occurred.",
+      "status": 400,
+      "errors": {
+        "$": [
+          "JSON deserialization for type 'Productos.Api.Contracts.ProductoWriteDto' was missing required properties including: 'precio'."
+        ],
+        "dto": [
+          "The dto field is required."
+        ]
+      },
+      "traceId": "00-6519584b74e901b7ed5a7f9235fb9b36-b91f01f3b12880f8-00"
+    },
+    "location": null,
+    "empty": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/productos/2147483647",
+    "status": 404,
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.5",
+      "title": "Not Found",
+      "status": 404,
+      "traceId": "00-4c66b928f764769cda0e6836197e9ebc-d736610b80798dc2-00"
+    },
+    "location": null,
+    "empty": false
+  },
+  {
+    "method": "PUT",
+    "path": "/api/productos/2147483647",
+    "status": 404,
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.5",
+      "title": "Not Found",
+      "status": 404,
+      "traceId": "00-f0b24c3b86adedac07e3412354c90504-22da142c2ee304eb-00"
+    },
+    "location": null,
+    "empty": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/productos?page=0",
+    "status": 400,
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.1",
+      "title": "One or more validation errors occurred.",
+      "status": 400,
+      "errors": {
+        "page": [
+          "The field page must be between 1 and 1000000."
+        ]
+      },
+      "traceId": "00-486e7305111e0c6c7ce64e3a2a6e219c-4a99152680f4d539-00"
+    },
+    "location": null,
+    "empty": false
+  },
+  {
+    "method": "GET",
+    "path": "/api/productos?pageSize=101",
+    "status": 400,
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.1",
+      "title": "One or more validation errors occurred.",
+      "status": 400,
+      "errors": {
+        "pageSize": [
+          "The field pageSize must be between 1 and 100."
+        ]
+      },
+      "traceId": "00-dba2fad25c8dfc0c854f396a42af0a92-0ef93a049ffc4821-00"
+    },
+    "location": null,
+    "empty": false
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/productos/1",
+    "status": 204,
+    "body": null,
+    "location": null,
+    "empty": true
+  },
+  {
+    "method": "GET",
+    "path": "/api/productos/1",
+    "status": 404,
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.5",
+      "title": "Not Found",
+      "status": 404,
+      "traceId": "00-b8b78495c8e28666ce23a9e3bde0e9d1-f676aee53ef68723-00"
+    },
+    "location": null,
+    "empty": false
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/productos/1",
+    "status": 404,
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.5",
+      "title": "Not Found",
+      "status": 404,
+      "traceId": "00-7c10ade5036e486dc16de60cdc73ebd7-c0e1f55b83cf71a0-00"
+    },
+    "location": null,
+    "empty": false
+  }
+]

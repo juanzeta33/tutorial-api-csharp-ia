@@ -1,0 +1,53 @@
+api-1  | info: Microsoft.Hosting.Lifetime[14]
+api-1  |       Now listening on: http://[::]:8080
+api-1  | info: Microsoft.Hosting.Lifetime[0]
+api-1  |       Application started. Press Ctrl+C to shut down.
+api-1  | info: Microsoft.Hosting.Lifetime[0]
+api-1  |       Hosting environment: Development
+api-1  | info: Microsoft.Hosting.Lifetime[0]
+api-1  |       Content root path: /app
+api-1  | Cannot load library libgssapi_krb5.so.2 
+api-1  | Error: libgssapi_krb5.so.2: cannot open shared object file: No such file or directory
+api-1  | info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+api-1  |       Executed DbCommand (19ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+api-1  |       SELECT p."Id", p."Nombre", p."Precio", p."Existencias"
+api-1  |       FROM productos AS p
+api-1  |       WHERE p."Id" = @id
+api-1  |       LIMIT 2
+api-1  | info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+api-1  |       Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Int32), @p='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+api-1  |       SELECT p."Id", p."Nombre", p."Precio", p."Existencias"
+api-1  |       FROM productos AS p
+api-1  |       ORDER BY p."Id"
+api-1  |       LIMIT @p1 OFFSET @p
+api-1  | info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+api-1  |       Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+api-1  |       INSERT INTO productos ("Existencias", "Nombre", "Precio")
+api-1  |       VALUES (@p0, @p1, @p2)
+api-1  |       RETURNING "Id";
+api-1  | info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+api-1  |       Executed DbCommand (0ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+api-1  |       SELECT p."Id", p."Existencias", p."Nombre", p."Precio"
+api-1  |       FROM productos AS p
+api-1  |       WHERE p."Id" = @p
+api-1  |       LIMIT 1
+api-1  | info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+api-1  |       Executed DbCommand (1ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?', @p2='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+api-1  |       UPDATE productos SET "Existencias" = @p0, "Nombre" = @p1, "Precio" = @p2
+api-1  |       WHERE "Id" = @p3;
+api-1  | info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+api-1  |       Executed DbCommand (0ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+api-1  |       SELECT p."Id", p."Nombre", p."Precio", p."Existencias"
+api-1  |       FROM productos AS p
+api-1  |       WHERE p."Id" = @id
+api-1  |       LIMIT 2
+api-1  | info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+api-1  |       Executed DbCommand (0ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+api-1  |       SELECT p."Id", p."Existencias", p."Nombre", p."Precio"
+api-1  |       FROM productos AS p
+api-1  |       WHERE p."Id" = @p
+api-1  |       LIMIT 1
+api-1  | info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+api-1  |       Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+api-1  |       DELETE FROM productos
+api-1  |       WHERE "Id" = @p0;

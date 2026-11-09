@@ -1,0 +1,36 @@
+[
+  {
+    "method": "POST",
+    "path": "/api/productos",
+    "status": 201,
+    "body": {
+      "id": 3,
+      "nombre": "Marcador SQL",
+      "precio": 2.25,
+      "existencias": 5
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/api/productos/3",
+    "status": 204,
+    "body": null
+  },
+  {
+    "method": "GET",
+    "path": "/api/productos/3",
+    "status": 200,
+    "body": {
+      "id": 3,
+      "nombre": "Marcador SQL actualizado",
+      "precio": 2.75,
+      "existencias": 3
+    }
+  },
+  {
+    "method": "DELETE",
+    "path": "/api/productos/3",
+    "status": 204,
+    "body": null
+  }
+]

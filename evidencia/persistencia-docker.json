@@ -1,0 +1,18 @@
+{
+  "restart_api_and_db": true,
+  "product_after_restart": {
+    "id": 2,
+    "nombre": "Cuaderno en Docker",
+    "precio": 4.5,
+    "existencias": 8
+  },
+  "docker_verified": true,
+  "recreated_api_and_db": true,
+  "container_ids_changed": true,
+  "product_after_recreation": {
+    "id": 2,
+    "nombre": "Cuaderno en Docker",
+    "precio": 4.5,
+    "existencias": 8
+  }
+}

@@ -1,0 +1,37 @@
+name: profe-api-csharp
+x-api: &api
+  image: profe-productos-api:local
+  environment: &api-env
+    ASPNETCORE_ENVIRONMENT: Development
+    ConnectionStrings__Productos: Host=db;Port=5432;Database=productos;Username=profe;Password=${POSTGRES_PASSWORD:?Crea .env desde .env.example}
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: profe
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Crea .env desde .env.example}
+      POSTGRES_DB: productos
+    volumes:
+      - productos-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U profe -d productos"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  migrate:
+    <<: *api
+    pull_policy: never
+    command: ["--migrate"]
+    depends_on:
+      db:
+        condition: service_healthy
+  api:
+    <<: *api
+    build: .
+    ports:
+      - "127.0.0.1:${API_PORT:-5210}:8080"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+volumes:
+  productos-data:

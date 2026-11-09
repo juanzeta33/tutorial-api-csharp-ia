@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-08",
+  "sdk": "10.0.402",
+  "runtime": "10.0.13",
+  "packages": {
+    "Microsoft.AspNetCore.OpenApi": "10.0.14",
+    "Microsoft.EntityFrameworkCore.Design": "10.0.14",
+    "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.3",
+    "Swashbuckle.AspNetCore.SwaggerUI": "10.3.1",
+    "dotnet-ef": "10.0.14"
+  },
+  "build": "passed, 0 warnings, 0 errors",
+  "http_requests": 18,
+  "swagger_ui": "GET executed, 200 with product from DB",
+  "native_postgres": "14.18, isolated cluster port 5541",
+  "native_api": "http://localhost:5211/swagger/index.html",
+  "persistence": "API and isolated PostgreSQL restarted; product retained",
+  "compose_config": "passed",
+  "docker_runtime": "verified: .NET / ASP.NET Core 10.0.14 linux-arm64",
+  "video": "script and working reference ready; narration and MP4 not generated",
+  "docker_engine": "28.3.0",
+  "compose": "v2.38.1-desktop.1",
+  "docker_postgres": "17.11",
+  "docker_crud": "18 HTTP requests passed",
+  "docker_migration": "migrate exited 0",
+  "docker_persistence": "product retained after restarting and recreating API + DB",
+  "runtime_uid": 1654,
+  "docker_swagger": "http://localhost:5210/swagger/index.html",
+  "docker_sql": "captured INSERT/UPDATE/SELECT/DELETE"
+}
